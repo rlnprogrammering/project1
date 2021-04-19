@@ -25,9 +25,8 @@ public class KeyNumbers {
     private String taily_Antigen_tests;
     private String daily_PCR_tests;
     private String daily_antigentest_diff;
-    private String daily_pcrtest_diff;
 
-    public KeyNumbers(String date, String testAmount, String testedTotal, String confirmedCases, String covidNoMore, String deathCount, String newConfirmedCases, String deathByDay, String covidNoMoreByDay, String hospitalized, String respirator, String intensiveCare, String hospitalizedByDay, String changeInHospitalization, String changeInRespirator, String changeInIntensiveCare, String testedFirstTime, String testsByDay, String daily_Infected_Diff, String test_totalPCR, String test_totalAG, String taily_Antigen_tests, String daily_PCR_tests, String daily_antigentest_diff, String daily_pcrtest_diff) {
+    public KeyNumbers(String date, String testAmount, String testedTotal, String confirmedCases, String covidNoMore, String deathCount, String newConfirmedCases, String deathByDay, String covidNoMoreByDay, String hospitalized, String respirator, String intensiveCare, String hospitalizedByDay, String changeInHospitalization, String changeInRespirator, String changeInIntensiveCare, String testedFirstTime, String testsByDay, String daily_Infected_Diff, String test_totalPCR, String test_totalAG, String taily_Antigen_tests, String daily_PCR_tests, String daily_antigentest_diff) {
         this.date = date;
         this.testAmount = testAmount;
         this.testedTotal = testedTotal;
@@ -52,7 +51,6 @@ public class KeyNumbers {
         this.taily_Antigen_tests = taily_Antigen_tests;
         this.daily_PCR_tests = daily_PCR_tests;
         this.daily_antigentest_diff = daily_antigentest_diff;
-        this.daily_pcrtest_diff = daily_pcrtest_diff;
     }
 
     public String getDate() {
@@ -151,10 +149,6 @@ public class KeyNumbers {
         return daily_antigentest_diff;
     }
 
-    public String getDaily_pcrtest_diff() {
-        return daily_pcrtest_diff;
-    }
-
     @Override
     public String toString() {
         return "KeyNumbers{" +
@@ -182,7 +176,6 @@ public class KeyNumbers {
                 ", taily_Antigen_tests='" + taily_Antigen_tests + '\'' +
                 ", daily_PCR_tests='" + daily_PCR_tests + '\'' +
                 ", daily_antigentest_diff='" + daily_antigentest_diff + '\'' +
-                ", daily_pcrtest_diff='" + daily_pcrtest_diff + '\'' +
                 '}';
     }
 }

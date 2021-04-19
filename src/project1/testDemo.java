@@ -9,5 +9,9 @@ public class testDemo {
         ArrayList<KeyNumbers> stats = KeyNumbersFileHandler.getKeyNumbersFromFile("Covid19Stats/Kommunalt_DB/01_noegletal.csv");
         Phase phase1 = new Phase("1" ,stats);
         phase1.printKeyNumbers();
+
+        //ArrayList<KeyNumbers> keyNumbers = phase1.getKeyNumbers();
+        //System.out.println(keyNumbers.get(3).getDate());
+
     }
 }

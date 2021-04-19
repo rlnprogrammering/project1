@@ -8,7 +8,7 @@ public class Phase {
 
     public Phase(String phaseNumber, ArrayList<KeyNumbers> keyNumbers) {
         this.phaseNumber = phaseNumber;
-        this.keyNumbers = keyNumbers;
+        this.keyNumbers = (ArrayList<KeyNumbers>) keyNumbers.clone();
     }
 
     public void printKeyNumbers() {
@@ -20,4 +20,6 @@ public class Phase {
     public ArrayList<KeyNumbers> getKeyNumbers() {
         return (ArrayList<KeyNumbers>) keyNumbers.clone();
     }
+
+
 }
