@@ -17,7 +17,7 @@ public class CommuneCodeFileHandler {
         HashMap<String, String> communeCodeHashMap = new HashMap<>();
 
         Path file = Paths.get(filename);
-        try (BufferedReader reader = Files.newBufferedReader(file, StandardCharsets.ISO_8859_1)) {
+        try (BufferedReader reader = Files.newBufferedReader(file)) {
             String line = null;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(";");
