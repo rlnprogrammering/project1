@@ -41,7 +41,7 @@ public class testDemo {
         ArrayList<ConfirmedCases> test4 = ConfirmedCasesFileHandler.getConfirmedCasesFromFile("resources/Covid19Stats/Kommunalt_DB/07_bekraeftede_tilfaelde_pr_dag_pr_kommune.csv");
         ListConfirmedCases listConfirmedCases = new ListConfirmedCases(test4);
         ArrayList<ConfirmedCases> confirmedCases = listConfirmedCases.getConfirmedCasesList();
-        System.out.println(confirmedCases.get(7).getCommune());
+        System.out.println(confirmedCases.get(8).getCommune());
 
         /*ConfirmedCasesAgeGroupFileHandler confirmedCasesAgeGroupFileHandler = new ConfirmedCasesAgeGroupFileHandler();
         ArrayList<ConfirmedCasesAgeGroup> test5 = ConfirmedCasesAgeGroupFileHandler.getConfirmedCasesAgeGroupFromFile("Covid19Stats/Kommunalt_DB/09_tilfaelde_aldersgrp_kommuner.csv");
