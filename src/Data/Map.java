@@ -1,4 +1,4 @@
-package project1;
+package Data;
 
 public class Map {
     private String commune;

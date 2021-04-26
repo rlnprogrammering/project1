@@ -1,9 +1,7 @@
-package project1;
+package Data;
 
-import Filehandler.DeathCountFileHandler;
-import Filehandler.HospitalizedFileHandler;
-import Filehandler.KeyNumbersFileHandler;
-import Filehandler.MapFileHandler;
+import Filehandler.Comunally.*;
+
 
 import java.util.ArrayList;
 
@@ -33,11 +31,24 @@ public class testDemo {
 
  */
 
-        MapFileHandler mapFileHandler = new MapFileHandler();
+        /*MapFileHandler mapFileHandler = new MapFileHandler();
         ArrayList<Map> test3 = MapFileHandler.getMapFromFile("Covid19Stats/Kommunalt_DB/10_kort_pr_kommune.csv");
         ListMap listMap = new ListMap(test3);
         ArrayList<Map> map = listMap.getMapList();
-        System.out.println(map.get(2).getTests7Days());
+        System.out.println(map.get(2).getTests7Days());*/
+
+        /*ConfirmedCasesFileHandler confirmedCasesFileHandler = new ConfirmedCasesFileHandler();
+        ArrayList<ConfirmedCases> test4 = ConfirmedCasesFileHandler.getConfirmedCasesFromFile("Covid19Stats/Kommunalt_DB/07_bekraeftede_tilfaelde_pr_dag_pr_kommune.csv");
+        ListConfirmedCases listConfirmedCases = new ListConfirmedCases(test4);
+        ArrayList<ConfirmedCases> confirmedCases = listConfirmedCases.getConfirmedCasesList();
+        System.out.println(confirmedCases.get(2).getDate());*/
+
+        ConfirmedCasesAgeGroupFileHandler confirmedCasesAgeGroupFileHandler = new ConfirmedCasesAgeGroupFileHandler();
+        ArrayList<ConfirmedCasesAgeGroup> test5 = ConfirmedCasesAgeGroupFileHandler.getConfirmedCasesAgeGroupFromFile("Covid19Stats/Kommunalt_DB/09_tilfaelde_aldersgrp_kommuner.csv");
+        ListConfirmedCasesAgeGroup listConfirmedCasesAgeGroup = new ListConfirmedCasesAgeGroup(test5);
+        ArrayList<ConfirmedCasesAgeGroup> confirmedCasesAgeGroups = listConfirmedCasesAgeGroup.getConfirmedCasesListAgeGroup();
+        System.out.println(confirmedCasesAgeGroups.get(4).getCommune());
+
 
     }
 }
