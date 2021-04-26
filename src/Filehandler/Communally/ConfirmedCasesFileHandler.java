@@ -37,3 +37,5 @@ public class ConfirmedCasesFileHandler {
         return new ConfirmedCases(communeCodeHashMap.get(tokens[0]),tokens[1], tokens[2]);
     }
 }
+
+
