@@ -1,8 +1,6 @@
 package Data;
 
-import Data.Communally.CommuneCodeHashMap;
-import Data.Communally.ConfirmedCasesAgeGroup;
-import Data.Communally.ListConfirmedCasesAgeGroup;
+import Data.Communally.*;
 import Filehandler.Communally.ConfirmedCasesAgeGroupFileHandler;
 import Filehandler.Communally.*;
 
@@ -41,11 +39,11 @@ public class testDemo {
         ArrayList<Map> map = listMap.getMapList();
         System.out.println(map.get(2).getTests7Days());*/
 
-        /*ConfirmedCasesFileHandler confirmedCasesFileHandler = new ConfirmedCasesFileHandler();
-        ArrayList<ConfirmedCases> test4 = ConfirmedCasesFileHandler.getConfirmedCasesFromFile("Covid19Stats/Kommunalt_DB/07_bekraeftede_tilfaelde_pr_dag_pr_kommune.csv");
+        ConfirmedCasesFileHandler confirmedCasesFileHandler = new ConfirmedCasesFileHandler();
+        ArrayList<ConfirmedCases> test4 = ConfirmedCasesFileHandler.getConfirmedCasesFromFile("resources/Covid19Stats/Kommunalt_DB/07_bekraeftede_tilfaelde_pr_dag_pr_kommune.csv");
         ListConfirmedCases listConfirmedCases = new ListConfirmedCases(test4);
         ArrayList<ConfirmedCases> confirmedCases = listConfirmedCases.getConfirmedCasesList();
-        System.out.println(confirmedCases.get(2).getDate());*/
+        System.out.println(confirmedCases.get(2).getCommune());
 
         /*ConfirmedCasesAgeGroupFileHandler confirmedCasesAgeGroupFileHandler = new ConfirmedCasesAgeGroupFileHandler();
         ArrayList<ConfirmedCasesAgeGroup> test5 = ConfirmedCasesAgeGroupFileHandler.getConfirmedCasesAgeGroupFromFile("Covid19Stats/Kommunalt_DB/09_tilfaelde_aldersgrp_kommuner.csv");
@@ -53,8 +51,8 @@ public class testDemo {
         ArrayList<ConfirmedCasesAgeGroup> confirmedCasesAgeGroups = listConfirmedCasesAgeGroup.getConfirmedCasesListAgeGroup();
         System.out.println(confirmedCasesAgeGroups.get(4).getCommune());*/
 
-        CommuneCodeHashMap communeCodeHashMap = new CommuneCodeHashMap(CommuneCodeFileHandler.getCommuneCodesFromFile("resources/Commune_codes.csv"));
-        System.out.println(communeCodeHashMap.get("101"));
+        /*CommuneCodeHashMap communeCodeHashMap = new CommuneCodeHashMap(CommuneCodeFileHandler.getCommuneCodesFromFile("resources/Commune_codes.csv"));
+        System.out.println(communeCodeHashMap.get("101"));*/
 
 
     }

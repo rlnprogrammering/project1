@@ -1,5 +1,6 @@
 package Filehandler.Communally;
 
+import Data.Communally.CommuneCodeHashMap;
 import Data.Communally.ConfirmedCases;
 
 import java.io.BufferedReader;
@@ -11,6 +12,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class ConfirmedCasesFileHandler {
+    private static final CommuneCodeHashMap communeCodeHashMap = new CommuneCodeHashMap(CommuneCodeFileHandler.getCommuneCodesFromFile("resources/Commune_codes.csv"));
+
     public static ArrayList<ConfirmedCases> getConfirmedCasesFromFile(String filename) {
         ArrayList<ConfirmedCases> confirmedCasesList = new ArrayList<>();
 
@@ -18,7 +21,6 @@ public class ConfirmedCasesFileHandler {
         try (BufferedReader reader = Files.newBufferedReader(file, StandardCharsets.ISO_8859_1)) {
             String line = null;
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
                 ConfirmedCases confirmedCases = parseNumbers(line);
                 confirmedCasesList.add(confirmedCases);
             }
@@ -30,7 +32,8 @@ public class ConfirmedCasesFileHandler {
     }
 
     private static ConfirmedCases parseNumbers(String inputString) {
+        //CommuneCodeHashMap communeCodeHashMap = new CommuneCodeHashMap(CommuneCodeFileHandler.getCommuneCodesFromFile("resources/Commune_codes.csv"));
         String[] tokens = inputString.split(";");
-        return new ConfirmedCases(tokens[0],tokens[1], tokens[2]);
+        return new ConfirmedCases(communeCodeHashMap.get(tokens[0]),tokens[1], tokens[2]);
     }
 }
