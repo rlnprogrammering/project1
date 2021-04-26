@@ -1,6 +1,10 @@
 package Data;
 
-import Filehandler.Comunally.*;
+import Data.Communally.CommuneCodeHashMap;
+import Data.Communally.ConfirmedCasesAgeGroup;
+import Data.Communally.ListConfirmedCasesAgeGroup;
+import Filehandler.Communally.ConfirmedCasesAgeGroupFileHandler;
+import Filehandler.Communally.*;
 
 
 import java.util.ArrayList;
@@ -43,11 +47,14 @@ public class testDemo {
         ArrayList<ConfirmedCases> confirmedCases = listConfirmedCases.getConfirmedCasesList();
         System.out.println(confirmedCases.get(2).getDate());*/
 
-        ConfirmedCasesAgeGroupFileHandler confirmedCasesAgeGroupFileHandler = new ConfirmedCasesAgeGroupFileHandler();
+        /*ConfirmedCasesAgeGroupFileHandler confirmedCasesAgeGroupFileHandler = new ConfirmedCasesAgeGroupFileHandler();
         ArrayList<ConfirmedCasesAgeGroup> test5 = ConfirmedCasesAgeGroupFileHandler.getConfirmedCasesAgeGroupFromFile("Covid19Stats/Kommunalt_DB/09_tilfaelde_aldersgrp_kommuner.csv");
         ListConfirmedCasesAgeGroup listConfirmedCasesAgeGroup = new ListConfirmedCasesAgeGroup(test5);
         ArrayList<ConfirmedCasesAgeGroup> confirmedCasesAgeGroups = listConfirmedCasesAgeGroup.getConfirmedCasesListAgeGroup();
-        System.out.println(confirmedCasesAgeGroups.get(4).getCommune());
+        System.out.println(confirmedCasesAgeGroups.get(4).getCommune());*/
+
+        CommuneCodeHashMap communeCodeHashMap = new CommuneCodeHashMap(CommuneCodeFileHandler.getCommuneCodesFromFile("resources/Commune_codes.csv"));
+        System.out.println(communeCodeHashMap.get("101"));
 
 
     }
